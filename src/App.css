@@ -6,6 +6,15 @@ p {
   vertical-align: -1em;
 }
 
+.bionicBold {
+  font-weight: bold;
+}
+
+.bionic {
+  display: inline;
+  line-height: 0em;
+}
+
 /* LIGHT THEME */
 
 .light-theme {
