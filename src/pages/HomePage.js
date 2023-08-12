@@ -20,11 +20,13 @@ const HomePage = () => {
                     <h1>Effie Guenther</h1>
                     <h5>I develop websites and mobile applications</h5>
                 </Col>
-                <Col className='d-flex justify-content-center align-items-end flex-column'>
-                    <Button>Projects</Button>
-                    <Button>Resume</Button>
-                    <Button>About Me</Button>
-                    <Button>Contact</Button>
+                <Col className='col-xs-12 col-sm-3 text-center'>
+                    <div className='sm-d-flex justify-content-center align-items-center flex-column'>
+                        <Button className='xs-d-inline'>Projects</Button>
+                        <Button className='xs-d-inline'>Resume</Button>
+                        <Button className='xs-d-inline'>About Me</Button>
+                        <Button className='xs-d-inline'>Contact</Button>
+                    </div>
                 </Col>
             </Row>
             <Row id='projects'>

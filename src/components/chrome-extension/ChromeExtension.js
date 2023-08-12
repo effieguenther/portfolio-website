@@ -3,7 +3,7 @@ import { PARAGRAPHS } from './PARAGRAPHS';
 import { useState } from 'react';
 
 const ChromeExtension = () => {
-    const [text, setText] = useState(PARAGRAPHS[0].text);
+    const text = PARAGRAPHS[0].text;
     const [bionic, setBionic] = useState(false);
     const [font, setFont] = useState('default');
     const [lineHeight, setLineHeight] = useState(1.2);
@@ -49,11 +49,13 @@ const ChromeExtension = () => {
         return (bionic === false) ?
             ( 
                 <div style={styles}>
+                    <h6 className='font-weight-bold'>Sample Text</h6>
                     <p>{text}</p>
                 </div>
             ) :
             (
                 <div style={styles} className='bionic'>
+                    <h6 className='font-weight-bold'>Sample Text</h6>
                     {
                         words.map((word) => {
                             const halfLength = Math.ceil(word.length / 2);
@@ -72,36 +74,44 @@ const ChromeExtension = () => {
     }
 
     return (
-        <Row className='my-3'>
-            <Col>
-                <BionicRender />
-            </Col>
-            <Col sm='4' xs='6'>
-                <Card  className='chrome-extension d-flex align-items-center py-2'>
-                    <h6>FOCUS READER</h6>
-                    <p>Bionic</p>
-                    <label class="switch">
-                        <input type="checkbox" id="bionic" onChange={bionicCheckbox}/>
-                        <span class="slider"></span>
-                    </label>
-                    <p>Change Font</p>
-                    <select name="fonts" className='text-center' onChange={fontMenu}>
-                        <option value="">Default</option>
-                        <option value="arial">Arial</option>
-                        <option value="helvetica">Helvetica</option>
-                        <option value="Comic Sans MS">Comic Sans MS</option>
-                    </select>
-                    <div className='text-center'>
-                        <p>Letter Spacing</p>
-                        <Button onClick={decreaseLetterSpacing}>-</Button>
-                        <Button onClick={increaseLetterSpacing}>+</Button>
-                        <p>Line Spacing</p>
-                        <Button onClick={decreaseLineHeight}>-</Button>
-                        <Button onClick={increaseLineHeight}>+</Button>
-                    </div>
-                </Card>
-            </Col>
-        </Row>
+        <>
+            <Row className='text-center mt-4'>
+                <h4>Chrome extension which alters text in the browser</h4>
+                <a href='https://github.com/effieguenther/focusReader'>see the code</a>
+            </Row>
+            <Row className='my-3'>
+                <Col>
+                    <Card className='sample-text'>
+                        <BionicRender />
+                    </Card>
+                </Col>
+                <Col sm='4' xs='6'>
+                    <Card  className='chrome-extension d-flex align-items-center py-2'>
+                        <h6>FOCUS READER</h6>
+                        <p>Bionic</p>
+                        <label class="switch">
+                            <input type="checkbox" id="bionic" onChange={bionicCheckbox}/>
+                            <span class="slider"></span>
+                        </label>
+                        <p>Change Font</p>
+                        <select name="fonts" className='text-center' onChange={fontMenu}>
+                            <option value="">Default</option>
+                            <option value="arial">Arial</option>
+                            <option value="helvetica">Helvetica</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                        </select>
+                        <div className='text-center'>
+                            <p>Letter Spacing</p>
+                            <Button onClick={decreaseLetterSpacing}>-</Button>
+                            <Button onClick={increaseLetterSpacing}>+</Button>
+                            <p>Line Spacing</p>
+                            <Button onClick={decreaseLineHeight}>-</Button>
+                            <Button onClick={increaseLineHeight}>+</Button>
+                        </div>
+                    </Card>
+                </Col>
+            </Row>
+        </>
     )
 }
 

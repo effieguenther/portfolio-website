@@ -19,6 +19,7 @@ p {
 
 .chrome-extension {
   text-align: center;
+  height: 400px;
 }
 
 .chrome-extension button {
@@ -30,6 +31,12 @@ p {
 
 .chrome-extension select {
   width: 9em;
+}
+
+.sample-text {
+  max-height: 341px;
+  min-height: 341px;
+  overflow-y: auto;
 }
 
 /* LIGHT THEME */
