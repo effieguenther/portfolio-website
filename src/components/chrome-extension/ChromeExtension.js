@@ -1,4 +1,4 @@
-import { Card, Row, Col } from 'reactstrap';
+import { Card, Row, Col, Button } from 'reactstrap';
 import { PARAGRAPHS } from './PARAGRAPHS';
 import { useState } from 'react';
 
@@ -72,33 +72,33 @@ const ChromeExtension = () => {
     }
 
     return (
-        <Row className='chrome-extension'>
-            <Col xs='6'>
+        <Row className='my-3'>
+            <Col>
                 <BionicRender />
             </Col>
-            <Col xs='6'>
-                <Card>
+            <Col sm='4' xs='6'>
+                <Card  className='chrome-extension d-flex align-items-center py-2'>
                     <h6>FOCUS READER</h6>
-                    <hr />
                     <p>Bionic</p>
                     <label class="switch">
                         <input type="checkbox" id="bionic" onChange={bionicCheckbox}/>
                         <span class="slider"></span>
                     </label>
                     <p>Change Font</p>
-                    <select name="fonts" id="fonts" onChange={fontMenu}>
+                    <select name="fonts" className='text-center' onChange={fontMenu}>
                         <option value="">Default</option>
                         <option value="arial">Arial</option>
                         <option value="helvetica">Helvetica</option>
                         <option value="Comic Sans MS">Comic Sans MS</option>
                     </select>
-                    <p>Letter Spacing</p>
-                    <button onClick={decreaseLetterSpacing}>-</button>
-                    <button onClick={increaseLetterSpacing}>+</button>
-                    <p>Line Spacing</p>
-                    <button onClick={decreaseLineHeight}>-</button>
-                    <button onClick={increaseLineHeight}>+</button>
-
+                    <div className='text-center'>
+                        <p>Letter Spacing</p>
+                        <Button onClick={decreaseLetterSpacing}>-</Button>
+                        <Button onClick={increaseLetterSpacing}>+</Button>
+                        <p>Line Spacing</p>
+                        <Button onClick={decreaseLineHeight}>-</Button>
+                        <Button onClick={increaseLineHeight}>+</Button>
+                    </div>
                 </Card>
             </Col>
         </Row>

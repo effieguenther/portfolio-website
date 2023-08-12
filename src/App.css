@@ -6,6 +6,8 @@ p {
   vertical-align: -1em;
 }
 
+/* CHROME EXTENSION STYLING */
+
 .bionicBold {
   font-weight: bold;
 }
@@ -13,6 +15,21 @@ p {
 .bionic {
   display: inline;
   line-height: 0em;
+}
+
+.chrome-extension {
+  text-align: center;
+}
+
+.chrome-extension button {
+  background-color: rgb(201, 206, 201);
+  color: rgb(63, 50, 50);
+  margin: 0.2em 0.05em;
+  width: 4em;
+}
+
+.chrome-extension select {
+  width: 9em;
 }
 
 /* LIGHT THEME */
@@ -26,7 +43,7 @@ p {
   background-color: rgb(201, 206, 201);
   color: rgb(63, 50, 50);
   margin: 0.2em 1em 0.2em 0.2em;
-  width: 100px;
+  width: 7em;
 }
 
 /* DARK THEME */
