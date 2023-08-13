@@ -24,6 +24,10 @@ const ChromeExtension = () => {
 
     const decreaseLineHeight = () => {
         const newHeight = parseInt(lineHeight) - 1;
+        if (newHeight < 1) {
+            alert('minimum line height reached');
+            return;
+        }
         setLineHeight(newHeight);
     }
 
@@ -34,6 +38,10 @@ const ChromeExtension = () => {
 
     const decreaseLetterSpacing = () => {
         const newSpacing = parseInt(letterSpacing) - 1;
+        if (newSpacing < 0) {
+            alert('minimum letter spacing reached');
+            return;
+        }
         setLetterSpacing(newSpacing);
     }
 
@@ -77,7 +85,7 @@ const ChromeExtension = () => {
         <>
             <Row className='text-center project-header'>
                 <h4>Chrome extension which alters text in the browser
-                <a href='https://github.com/effieguenther/focusReader'>(see the code)</a></h4>
+                <a href='https://github.com/effieguenther/focusReader' target='_blank'>(see the code)</a></h4>
             </Row>
             <Row className='my-3'>
                 <Col>

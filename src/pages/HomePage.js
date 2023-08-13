@@ -3,20 +3,21 @@ import headshot from '../assets/img/portfolio_headshot.png'
 import Header from '../components/Header';
 import ChromeExtension from '../components/chrome-extension/ChromeExtension';
 import SocialButtons from '../components/SocialButtons';
+import Resume from '../components/Resume';
 
 const HomePage = () => {
     return(
         <>
             <Header />
             <Row className='light-theme pt-4'>
-                <Col className='col-4'>
+                <Col className='col-4 col-md-3 d-flex align-items-end'>
                     <img
                     src={headshot}
                     alt='effie guenther headshot'
                     className='img-fluid'
                     />
                 </Col>
-                <Col className='col-8 d-flex align-items-center'>
+                <Col className='col-8 d-flex align-items-center mb-2'>
                     <Row>
                         <Col className='col-12'>
                             <p className='small-text'>Hello world, my name is</p>
@@ -42,6 +43,10 @@ const HomePage = () => {
             <Row>
                 <ChromeExtension />
             </Row>
+            <Row className='section-header'>
+                <h3 classsName='text-center'>Resume</h3>
+            </Row>
+            <Resume />
         </>
     );
 }
