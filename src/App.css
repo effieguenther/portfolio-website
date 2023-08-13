@@ -8,6 +8,23 @@ p {
 
 /* SECTION STYLING */
 
+.btn.social {
+  width: 2.4em;
+  height: 2.4em;
+  margin: 0.15em 0.15em;
+  padding: 0em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+}
+
+.nav-buttons .btn {
+  width: 7em;
+  margin: 0.1em 0.1em;
+}
+
 .section-header.row {
   background-color: rgb(201, 206, 201);
   padding: 0.5em 0em;
@@ -70,8 +87,6 @@ p {
 .light-theme .btn {
   background-color: rgb(201, 206, 201);
   color: rgb(63, 50, 50);
-  margin: 0.2em 1em 0.2em 0.2em;
-  width: 7em;
 }
 
 /* DARK THEME */
