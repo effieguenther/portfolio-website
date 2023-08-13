@@ -75,9 +75,9 @@ const ChromeExtension = () => {
 
     return (
         <>
-            <Row className='text-center mt-4'>
-                <h4>Chrome extension which alters text in the browser</h4>
-                <a href='https://github.com/effieguenther/focusReader'>see the code</a>
+            <Row className='text-center project-header'>
+                <h4>Chrome extension which alters text in the browser
+                <a href='https://github.com/effieguenther/focusReader'>(see the code)</a></h4>
             </Row>
             <Row className='my-3'>
                 <Col>

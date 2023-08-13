@@ -6,6 +6,26 @@ p {
   vertical-align: -1em;
 }
 
+/* SECTION STYLING */
+
+.section-header.row {
+  background-color: rgb(201, 206, 201);
+  padding: 0.5em 0em;
+  border: 1px solid rgb(53, 47, 47);
+}
+
+.project-header {
+  color: rgb(53, 47, 47);
+  padding: 1em 0em;
+}
+
+.project-header a {
+  color: rgb(116, 121, 116);
+  text-decoration: none;
+  font-size: small;
+  margin-left: 0.5em;
+}
+
 /* CHROME EXTENSION STYLING */
 
 .bionicBold {
@@ -24,7 +44,7 @@ p {
 
 .chrome-extension button {
   background-color: rgb(201, 206, 201);
-  color: rgb(63, 50, 50);
+  color: rgb(61, 51, 51);
   margin: 0.2em 0.05em;
   width: 4em;
 }
@@ -37,6 +57,7 @@ p {
   max-height: 341px;
   min-height: 341px;
   overflow-y: auto;
+  margin-left: 1em;
 }
 
 /* LIGHT THEME */

@@ -29,7 +29,10 @@ const HomePage = () => {
                     </div>
                 </Col>
             </Row>
-            <Row id='projects'>
+            <Row className='section-header'>
+                <h3 className='text-center'>My Projects</h3>
+            </Row>
+            <Row>
                 <ChromeExtension />
             </Row>
         </>
