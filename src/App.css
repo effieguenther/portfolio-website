@@ -45,8 +45,28 @@ p {
   margin-left: 0.5em;
 }
 
-.skills-list {
-  height: fit-content;
+.skills-list p {
+  width: 12em;
+  float: left;
+  margin: 0.3em 1em;
+  padding: 0.1em 0.1em;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.school-header {
+  margin: 0em 2em;
+  font-weight: bold;
+}
+
+.school-desc {
+  margin: 0em 0em 2em 3em;
+}
+
+p.story-desc {
+  width: 50em;
+  margin: 0em 1em 3em 3em;
 }
 
 /* CHROME EXTENSION STYLING */
