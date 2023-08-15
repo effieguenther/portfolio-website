@@ -2,7 +2,7 @@
 
 I'm showcasing the code to my portfolio website as an example of my skills. At the moment it is still a work in progress. 
 
-Visit the website here: https://portfolio-20b32.web.app/
+Visit the website here: effie-guenther.com
 
 ## libraries and frameworks used
 
