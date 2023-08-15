@@ -35,11 +35,11 @@ const Resume = () => {
                     <p>Communication</p>
                     <p>Calm under pressure</p>
                     <p>Attention to detail</p>
-                    <p>Emotional intelpgene</p>
+                    <p>Emotional intelligence</p>
                 </div>    
             </Row>
             <Row className='ms-1 my-4'>
-                <h5>Education</h5>
+                <h5 className='mt-3'>Education</h5>
             </Row>
             <Row>
                 <p className='school-header'>Nucamp Full Stack Program - 2023</p>

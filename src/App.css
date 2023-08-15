@@ -45,11 +45,15 @@ p {
   margin-left: 0.5em;
 }
 
+.skills-list {
+  margin-left: 1em;
+}
+
 .skills-list p {
   width: 12em;
   float: left;
-  margin: 0.3em 1em;
-  padding: 0.1em 0.1em;
+  margin: 0.2em 0.4em;
+  padding: 0.3em 0.1em;
   border: 1px solid black;
   border-radius: 0.3em;
   text-align: center;
