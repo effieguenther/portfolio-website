@@ -6,7 +6,57 @@ p {
   vertical-align: -1em;
 }
 
-/* SECTION STYLING */
+img {
+  border-radius: 8em;
+  margin: 1em;
+}
+
+/* ============ LIGHT THEME ============ */
+/*                F1F5CF
+                  C5CB94
+                  A2A968
+                  7F8748
+                  677028
+                  262622                 */
+
+    
+.light {
+  background-color: white;
+  color: #262622;
+}
+
+.light a {
+  color: #7F8748;
+}
+
+.light.section-header {
+  background-color: white;
+  color: #262622;
+  border: 1px solid #262622;
+}
+
+.light .btn {
+  background-color: #A2A968;
+}
+
+.light.header {
+  background-color: #677028;
+}
+
+.light.header-link {
+  color: white;
+}
+
+
+/* ================ LINK + BUTTON STYLING ============== */
+
+.header-link a {
+  text-decoration: none;
+  display: flex;
+  justify-content: end;
+  margin: 1em 1em 1em 2em;
+  font-size: small;
+}
 
 .btn.social {
   width: 2.4em;
@@ -17,33 +67,35 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
   color: white !important;
 }
 
 .nav-buttons .btn {
   width: 7em;
   margin: 0.1em 0.1em;
+  border: none;
 }
 
+/* ============== HEADER STYLING ============ */
+
 .section-header.row {
-  background-color: rgb(201, 206, 201);
   padding: 0.5em 0em;
-  border: 1px solid rgb(53, 47, 47);
   text-align: center
 }
 
 .project-header.row {
-  color: rgb(53, 47, 47);
   padding: 1em 0em;
   text-align: center;
 }
 
 .project-header a {
-  color: rgb(116, 121, 116);
   text-decoration: none;
   font-size: small;
   margin-left: 0.5em;
 }
+
+/* ============== RESUME STYLING ============= */
 
 .skills-list {
   margin-left: 1em;
@@ -90,8 +142,6 @@ p.story-desc {
 }
 
 .chrome-extension button {
-  background-color: rgb(201, 206, 201);
-  color: rgb(61, 51, 51);
   margin: 0.2em 0.05em;
   width: 4em;
 }
@@ -105,34 +155,4 @@ p.story-desc {
   min-height: 341px;
   overflow-y: auto;
   margin-left: 1em;
-}
-
-/* LIGHT THEME */
-
-.light-theme {
-  background-color: rgb(240, 241, 240);
-  color: rgb(63, 50, 50);
-}
-
-.light-theme .btn {
-  background-color: rgb(201, 206, 201);
-  color: rgb(63, 50, 50);
-}
-
-/* DARK THEME */
-
-.dark-theme {
-  background-color: rgb(64, 78, 64);
-  color:rgb(203, 205, 203);
-}
-
-.dark-theme .btn {
-  background-color: rgb(116, 121, 116);
-  border: white 1px solid;
-  vertical-align: middle;
-}
-
- .dark-theme .btn :hover {
-  background-color: rgb(201, 206, 201);
-  color: rgb(63, 50, 50);
 }

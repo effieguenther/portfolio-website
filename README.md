@@ -7,6 +7,7 @@ Visit the website here: effie-guenther.com
 ## libraries and frameworks used
 
 React <br />
+Redux <br />
 Bootstrap <br />
 Reactstrap <br />
 Font Awesome <br />

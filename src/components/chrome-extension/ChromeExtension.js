@@ -1,6 +1,7 @@
 import { Card, Row, Col, Button } from 'reactstrap';
 import { PARAGRAPHS } from './PARAGRAPHS';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const ChromeExtension = () => {
     const text = PARAGRAPHS[0].text;
@@ -8,6 +9,7 @@ const ChromeExtension = () => {
     const [font, setFont] = useState('default');
     const [lineHeight, setLineHeight] = useState(1.2);
     const [letterSpacing, setLetterSpacing] = useState(0);
+    const theme = useSelector((state) => state.themes.currentTheme);
 
     const bionicCheckbox = () => {
         setBionic(!bionic);
@@ -83,11 +85,11 @@ const ChromeExtension = () => {
 
     return (
         <>
-            <Row className='text-center project-header'>
+            <Row className={`${theme} text-center project-header`}>
                 <h4>Chrome extension which alters text in the browser
                 <a href='https://github.com/effieguenther/focusReader' target='_blank'>(see the code)</a></h4>
             </Row>
-            <Row className='my-3'>
+            <Row className={`${theme} my-3`}>
                 <Col>
                     <Card className='sample-text'>
                         <BionicRender />
