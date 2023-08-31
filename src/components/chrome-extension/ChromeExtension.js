@@ -89,9 +89,9 @@ const ChromeExtension = () => {
                 <h4>Chrome extension which alters text in the browser
                 <a href='https://github.com/effieguenther/focusReader' target='_blank'>(see the code)</a></h4>
             </Row>
-            <Row className={`${theme} my-3`}>
+            <Row className={`${theme} mt-3 mb-5`}>
                 <Col>
-                    <Card className='sample-text'>
+                    <Card className='sample-text p-3'>
                         <BionicRender />
                     </Card>
                 </Col>

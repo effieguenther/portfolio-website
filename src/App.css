@@ -37,16 +37,78 @@ img {
 
 .light .btn {
   background-color: #A2A968;
+  border: none;
+}
+
+.light .btn:hover {
+  background-color: #757e3b;
+  color: white;
+  border: none;
 }
 
 .light.header {
-  background-color: #677028;
+  background-color: #454c18;
 }
 
 .light.header-link {
   color: white;
 }
 
+.light .skills-list p {
+  border: 1px solid #262622;
+}
+
+/* ============ DARK THEME ============ */
+/*                c9c7cf
+                  605A73
+                  4B4560
+                  352F46
+                  292243
+                  1F163C
+                  151120                 */
+
+
+.dark {
+  background-color: #151120;
+  color: #c9c7cf;
+}
+
+.dark a {
+  color: white;
+}
+
+.dark.section-header {
+  color: white;
+  border: 1px solid white;
+}
+
+.dark .btn {
+  background-color: #c9c7cf;
+  color: #292243;
+}
+
+.dark .btn:hover {
+  background-color: #7c768f;
+  color: white;
+}
+
+.dark.header {
+  background-color: #605A73;
+}
+
+.dark .header-link {
+  color: white;
+}
+
+.dark .card {
+  background-color: #352f4b;
+  border: 1px solid #c9c7cf;
+  color: #c9c7cf;
+}
+
+.dark .skills-list p {
+  border: 1px solid #c9c7cf;
+}
 
 /* ================ LINK + BUTTON STYLING ============== */
 
@@ -106,7 +168,6 @@ img {
   float: left;
   margin: 0.2em 0.4em;
   padding: 0.3em 0.1em;
-  border: 1px solid black;
   border-radius: 0.3em;
   text-align: center;
 }
@@ -156,3 +217,4 @@ p.story-desc {
   overflow-y: auto;
   margin-left: 1em;
 }
+

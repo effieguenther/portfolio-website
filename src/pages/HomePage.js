@@ -25,7 +25,7 @@ const HomePage = () => {
     console.log(theme);
 
     return(
-        <>
+        <div className={theme}>
             <Header />
             <Row className={`${theme} pt-4`}>
                 <Col className='col-4 col-md-3 px-4 pb-4 d-flex align-items-start justify-content-center'>
@@ -65,7 +65,7 @@ const HomePage = () => {
                 <h3 classsName='text-center'>Resume</h3>
             </Row>
             <Resume />
-        </>
+        </div>
     );
 }
 
