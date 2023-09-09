@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import SocialButtons from '../components/SocialButtons';
 import Resume from '../components/Resume';
 import SunAndMoon from '../components/SunAndMoon';
+import BackToTop from '../components/BackToTop';
 
 const HomePage = () => {
     const props1 = useSpring({
@@ -53,8 +54,7 @@ const HomePage = () => {
                             <div className='nav-buttons mt-1'>
                                 <Button href='#projects'>Projects</Button>
                                 <Button href='#resume'>Resume</Button>
-                                <Button href='#resume'>About Me</Button>
-                                <Button className=''>Contact</Button>
+                                <Button href='#my-story'>My Story</Button>
                             </div>
                             <p className='mt-4 mb-0'>Connect with me!</p>
                             <SocialButtons />
@@ -63,7 +63,7 @@ const HomePage = () => {
                 </Col>
             </Row>
             <Row className={`section-header ${theme}`}>
-                <h3 className='text-center' id='projects'>My Projects</h3>
+                <h3 id='projects'>My Projects</h3>
             </Row>
             <Row className='projects'>
                 <Col xs='12' sm='6' lg='4'>
@@ -155,9 +155,18 @@ const HomePage = () => {
                 </Col>
             </Row>
             <Row className={`section-header ${theme}`}>
-                <h3 classsName='text-center' id='resume'>Resume</h3>
+                <h3 id='resume'>Resume</h3>
             </Row>
             <Resume />
+            <Row className={`section-header ${theme}`}>
+                <h3 id='my-story'>
+                    My Story
+                </h3>
+            </Row>
+            <Row>
+                <p className='story-desc'>I have loved coding since joning the robotics team in high school and continued my computer science study through a minor in college. However, I was young and enticed by a more creative line of work. After graduating college, I spent 4 years as a product developer for luxury fashion companies in New York City. After a while I felt stuck in a problematic industry, and I realized that I needed to make a huge change. For the past year, I have gotten back to my roots and dedicated every moment of my free time to learning code. Through bootcamps, self-study, and freelancing with Upwork, I have honed my skills and fallen in love with code. With my background in developing luxury products, I bring a unique eye for aesthetic and detail in my code to create visually stunning user experiences.</p>
+            </Row>
+            <BackToTop />
         </Container>
     );
 }

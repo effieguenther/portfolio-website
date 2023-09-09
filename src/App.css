@@ -190,6 +190,14 @@ img {
   z-index: 5;
 }
 
+.back-to-top-btn.btn {
+  position: fixed;
+  bottom: 1em;
+  right: 1.5em;
+  height: 3em;
+  width: 3em;
+}
+
 /* ============== SECTION STYLING ============ */
 
 .section-header.row {
@@ -296,8 +304,8 @@ p.school-desc {
 }
 
 p.story-desc {
-  padding-left: 3em;
-  padding-right: 2em;
+  text-align: center;
+  padding: 2em 2em 4em 2em;
 }
 
 /* CHROME EXTENSION STYLING */
