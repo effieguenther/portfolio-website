@@ -7,7 +7,7 @@ p {
 }
 
 img {
-  border-radius: 8em;
+  border-radius: 10em;
   margin: 1em;
 }
 
@@ -21,42 +21,71 @@ img {
 
     
 .light {
-  background-color: white;
+  background-color: #f0f3e7;
   color: #262622;
+  transition: background-color 2s, color 1s;
 }
 
 .light a {
-  color: #7F8748;
+  color: #cdcfb4;
+  transition: all 1s;
 }
 
 .light.section-header {
-  background-color: white;
   color: #262622;
-  border: 1px solid #262622;
+  border-top: 1px solid #262622;
+  transition: all 2s
 }
 
 .light .btn {
   background-color: #A2A968;
+  color: white;
   border: none;
+  transition: all 1s
 }
 
 .light .btn:hover {
   background-color: #757e3b;
   color: white;
-  border: none;
+  transition: all 1s
 }
 
 .light.header {
   background-color: #454c18;
+  transition: all 2s
 }
 
 .light.header-link {
   color: white;
+  transition: all 1s
 }
 
 .light .skills-list p {
   border: 1px solid #262622;
+  background-color: white;
+  transition: all 1s
 }
+
+.light .card {
+  background-color: #cdcfb4;
+  color: #454c18;
+  transition: all 1s
+}
+
+.light .project-card a {
+  color: #454c18;
+  transition: all 1s
+}
+
+.light .project-card .sub-header {
+  font-weight: bold;
+}
+
+.light .project-card .btn a {
+  color: white;
+  transition: all 1s;
+}
+
 
 /* ============ DARK THEME ============ */
 /*                c9c7cf
@@ -71,43 +100,63 @@ img {
 .dark {
   background-color: #151120;
   color: #c9c7cf;
+  transition: background-color 2s, color 1s;
 }
 
 .dark a {
   color: white;
+  transition: all 1s;
 }
 
 .dark.section-header {
   color: white;
-  border: 1px solid white;
+  border-top: 1px solid white;
+  transition: all 2s;
 }
 
 .dark .btn {
-  background-color: #c9c7cf;
-  color: #292243;
+  background-color: #a6a0b7;
+  color: #0f0f14;
+  transition: all 1s;
 }
 
 .dark .btn:hover {
   background-color: #7c768f;
-  color: white;
+  color: #0f0f14;
+  transition: all 1s;
 }
 
 .dark.header {
   background-color: #605A73;
+  transition: all 2s;
 }
 
 .dark .header-link {
   color: white;
+  transition: all 1s;
 }
 
 .dark .card {
-  background-color: #352f4b;
+  background-color: #312d3e;
   border: 1px solid #c9c7cf;
   color: #c9c7cf;
+  transition: all 1s;
 }
 
 .dark .skills-list p {
   border: 1px solid #c9c7cf;
+  background-color: #2b2837;
+  transition: all 1s;
+}
+
+.dark .project-card .btn a {
+  color: #0f0f14;
+  transition: all 1s;
+}
+
+.dark .project-card .sub-header {
+  color: white;
+  transition: all 1s
 }
 
 /* ================ LINK + BUTTON STYLING ============== */
@@ -137,30 +186,88 @@ img {
   width: 7em;
   margin: 0.1em 0.1em;
   border: none;
+  position:relative;
+  z-index: 5;
 }
 
-/* ============== HEADER STYLING ============ */
+/* ============== SECTION STYLING ============ */
 
 .section-header.row {
-  padding: 0.5em 0em;
+  padding-top: 1.5em;
   text-align: center
 }
 
-.project-header.row {
-  padding: 1em 0em;
-  text-align: center;
+#sun {
+  padding-right: 2em;
 }
 
-.project-header a {
+#sun img {
+  box-shadow: 0px 0px 20px white;
+  position: relative;
+  z-index: 0;
+}
+
+/* ============== PROJECT CARD STYLING ============ */
+
+div.projects.row {
+  margin: 1em 0em;
+}
+
+.projects .col-12, .col-6, .col-4 {
+  margin: 0.5em 0em;
+}
+
+.project-card.card {
+  margin: 0em;
+  padding: 1em 2em 0.5em 2em;
+  border-radius: 0.2em;
+  border: none;
+}
+
+.project-card .row {
+  margin-bottom: 2em;
+}
+
+.project-card .card-title {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  margin: 0em;
+}
+
+.project-card a {
   text-decoration: none;
-  font-size: small;
-  margin-left: 0.5em;
+}
+
+.project-card p {
+  margin-bottom: 0em;
+}
+
+.project-card .sub-header {
+  display: inline;
+  line-height: 0;
+}
+
+.project-card .skills-used {
+  display: inline;
+  padding-left: 0.5em;
+  line-height: 0;
+}
+
+.project-card .card-text {
+  margin-bottom: 1.5em;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  margin-bottom: 1em;
+  width: 100;
 }
 
 /* ============== RESUME STYLING ============= */
 
-.skills-list {
-  margin-left: 1em;
+div.skills-list {
+  padding-left: 4em;
 }
 
 .skills-list p {
@@ -172,18 +279,25 @@ img {
   text-align: center;
 }
 
-.school-header {
-  margin: 0em 2em;
+p.big-header {
+  font-size: large;
+  padding-top: 2em;
   font-weight: bold;
 }
 
-.school-desc {
-  margin: 0em 0em 2em 3em;
+p.small-header {
+  padding-left: 2em;
+  padding-top: 1em;
+  text-decoration: underline;
+}
+
+p.school-desc {
+  padding-left: 3em;
 }
 
 p.story-desc {
-  width: 50em;
-  margin: 0em 1em 3em 3em;
+  padding-left: 3em;
+  padding-right: 2em;
 }
 
 /* CHROME EXTENSION STYLING */

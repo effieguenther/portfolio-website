@@ -24,7 +24,7 @@ const Header = () => {
                     onClick={clickHandler}
                 >
                 {
-                    theme === 'light' ? ('dark mode') : ('light mode')
+                    theme === 'light' ? ('night mode') : ('day mode')
                 }
                 </Button>
             </Col>
