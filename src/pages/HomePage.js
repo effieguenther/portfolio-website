@@ -39,7 +39,7 @@ const HomePage = () => {
                     <Row className='pb-4'>
                         <Col className='col-12'>
                             <Row>
-                                <Col xs='9' sm='9' xl='10'>
+                                <Col xs='9' sm='8' md='9'>
                                     <p className='small-text'>Hello world, my name is</p>
                                     <animated.h1 style={props1}>Effie Guenther</animated.h1>
                                     <animated.h5 style={props2}>I develop websites and software</animated.h5>
