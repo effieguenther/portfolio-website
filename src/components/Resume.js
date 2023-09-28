@@ -1,8 +1,14 @@
 import { Row } from 'reactstrap';
+import { useSelector } from 'react-redux';
 
 const Resume = () => {
+    const theme = useSelector((state) => state.themes.currentTheme);
+
     return (
         <>
+            <Row className={`section-header ${theme}`}>
+                <h3 id='resume'>Resume</h3>
+            </Row>
             <Row>
                 <p className='big-header'>Skills</p>
                 <p className='small-header'>Technical Skills</p>
