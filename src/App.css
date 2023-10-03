@@ -11,6 +11,12 @@ img {
   margin: 1em;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* ============ LIGHT THEME ============ */
 /*                F1F5CF
                   C5CB94
@@ -165,7 +171,7 @@ img {
   text-decoration: none;
   display: flex;
   justify-content: end;
-  margin: 1em 1em 1em 2em;
+  padding: 1em 1em 1em 2em;
   font-size: small;
 }
 
@@ -183,11 +189,14 @@ img {
 }
 
 .nav-buttons .btn {
-  width: 7em;
-  margin: 0.1em 0.1em;
+  min-width: 6em;
   border: none;
-  position:relative;
-  z-index: 5;
+  margin-right: 0.3em;
+}
+
+div.nav-buttons {
+  display: flex;
+  margin: 0.5em 0em;
 }
 
 .back-to-top-btn.btn {

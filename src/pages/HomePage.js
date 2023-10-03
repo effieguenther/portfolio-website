@@ -14,10 +14,11 @@ const HomePage = () => {
     const [activeSection, setActiveSection] = useState('home');
 
     const transitions = useTransition(activeSection, {
-        from: { opacity: 0, transform: 'translate3d(0, 20px, 0)' },
+        from: { opacity: 0, transform: 'translate3d(100vw, 0, 0)' },
         enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-        leave: { opacity: 0, transform: 'translate3d(0, 20px, 0)' },
-        config: { duration: 500 },
+        leave: { opacity: 0, transform: 'translate3d(-20vw, 0, 0)' },
+        config: { duration: 400 },
+        exitBeforeEnter: true
     });
 
     const handleSectionChange = (section) => {
@@ -25,23 +26,20 @@ const HomePage = () => {
     };
 
     return(
-        <Container className={theme} fluid>
-            <Header />
-            {transitions((style, item) => (
-                <animated.div style={style} key={item}>
-                    {item === 'home' && <Home />}
-                    {item === 'projects' && <Projects />}
-                    {item === 'resume' && <Resume />}
-                    {item === 'mystory' && <MyStory />}
-                </animated.div>
-            ))}
-            <Button onClick={() => handleSectionChange('home')}>Home</Button>
-            <Button onClick={() => handleSectionChange('projects')}>Projects</Button>
-            <Button onClick={() => handleSectionChange('resume')}>Resume</Button>
-            <Button onClick={() => handleSectionChange('mystory')}>My Story</Button>
-
+        <div className={`${theme}`} style={{ minHeight: '100vh' }}>
+            <Header handleSectionChange={handleSectionChange} />
+            <Container fluid>
+                {transitions((style, item) => (
+                    <animated.div style={style} key={item}>
+                        {item === 'home' && <Home />}
+                        {item === 'projects' && <Projects />}
+                        {item === 'resume' && <Resume />}
+                        {item === 'mystory' && <MyStory />}
+                    </animated.div>
+                ))}
+            </Container>
             <BackToTop />
-        </Container>
+        </div>
     );
 }
 

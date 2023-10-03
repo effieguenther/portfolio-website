@@ -43,14 +43,8 @@
                                 <SunAndMoon currentTheme={theme}/>
                             </Col> */}
                         </Row>
-                        
                     </Col>
                     <Col className='text-start'>
-                        <div className='nav-buttons mt-1'>
-                            <Button href='#projects'>Projects</Button>
-                            <Button href='#resume'>Resume</Button>
-                            <Button href='#my-story'>My Story</Button>
-                        </div>
                         <p className='mt-4 mb-0'>Connect with me!</p>
                         <SocialButtons />
                     </Col>
