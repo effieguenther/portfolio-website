@@ -1,5 +1,5 @@
-import { Button, Container, } from 'reactstrap';
-import { useTransition, animated } from '@react-spring/web';
+import { Container, } from 'reactstrap';
+import { useTransition, animated, easings } from '@react-spring/web';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import Header from '../components/Header';
@@ -14,10 +14,10 @@ const HomePage = () => {
     const [activeSection, setActiveSection] = useState('home');
 
     const transitions = useTransition(activeSection, {
-        from: { opacity: 0, transform: 'translate3d(100vw, 0, 0)' },
+        from: { opacity: 0.5, transform: 'translate3d(60vw, 0, 0)' },
         enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-        leave: { opacity: 0, transform: 'translate3d(-20vw, 0, 0)' },
-        config: { duration: 400 },
+        leave: { opacity: 0, transform: 'translate3d(-100vw, 0, 0)' },
+        config: { duration: 400, easing: easings.easeOutSine },
         exitBeforeEnter: true
     });
 

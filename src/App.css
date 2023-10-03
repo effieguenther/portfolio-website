@@ -18,68 +18,68 @@ html, body {
 }
 
 /* ============ LIGHT THEME ============ */
-/*                F1F5CF
-                  C5CB94
-                  A2A968
-                  7F8748
-                  677028
-                  262622                 */
+/*                f0f0f0
+                  deded9
+                  b3b3a4
+                  86877a
+                  46473d
+                  303127                 */
 
     
 .light {
-  background-color: #f0f3e7;
-  color: #262622;
+  background-color: #f0f0f0;
+  color: #303127;
   transition: background-color 2s, color 1s;
 }
 
 .light a {
-  color: #cdcfb4;
+  color: #deded9;
   transition: all 1s;
 }
 
 .light.section-header {
-  color: #262622;
-  border-top: 1px solid #262622;
+  color: #303127;
+  border-top: 1px solid #303127;
   transition: all 2s
 }
 
 .light .btn {
-  background-color: #A2A968;
-  color: white;
+  background-color: #b3b3a4;
+  color: #303127;
   border: none;
   transition: all 1s
 }
 
 .light .btn:hover {
-  background-color: #757e3b;
-  color: white;
+  background-color: #86877a;
+  color: #303127;
   transition: all 1s
 }
 
 .light.header {
-  background-color: #454c18;
+  background-color: #46473d;
   transition: all 2s
 }
 
 .light.header-link {
-  color: white;
+  color: rgb(240, 240, 233);
   transition: all 1s
 }
 
 .light .skills-list p {
-  border: 1px solid #262622;
+  border: 1px solid #303127;
   background-color: white;
   transition: all 1s
 }
 
 .light .card {
-  background-color: #cdcfb4;
-  color: #454c18;
+  background-color: #deded9;
+  color: #303127;
   transition: all 1s
 }
 
 .light .project-card a {
-  color: #454c18;
+  color: #303127;
   transition: all 1s
 }
 
@@ -87,11 +87,10 @@ html, body {
   font-weight: bold;
 }
 
-.light .project-card .btn a {
-  color: white;
+.light img {
+  filter: grayscale(80%) hue-rotate(10deg);
   transition: all 1s;
 }
-
 
 /* ============ DARK THEME ============ */
 /*                c9c7cf
@@ -121,14 +120,13 @@ html, body {
 }
 
 .dark .btn {
-  background-color: #a6a0b7;
-  color: #0f0f14;
+  background-color: #948ea4;
+  color: white;
   transition: all 1s;
 }
 
 .dark .btn:hover {
-  background-color: #7c768f;
-  color: #0f0f14;
+  background-color: #6d6880;
   transition: all 1s;
 }
 
@@ -163,6 +161,11 @@ html, body {
 .dark .project-card .sub-header {
   color: white;
   transition: all 1s
+}
+
+.dark img {
+  filter: grayscale(90%) hue-rotate(240deg);
+  transition: all 1s;
 }
 
 /* ================ LINK + BUTTON STYLING ============== */

@@ -1,25 +1,36 @@
   import { Row, Col, Button} from 'reactstrap';
   import { useSelector } from 'react-redux';
-  import { useSpring, animated } from '@react-spring/web';
+  import { useTrail, animated } from '@react-spring/web';
   import headshot from '../assets/img/portfolio_headshot_color.png';
   import SocialButtons from '../components/SocialButtons';
-  import SunAndMoon from '../components/SunAndMoon';
 
   
   const Home = () => {
     const theme = useSelector((state) => state.themes.currentTheme);
-    const props1 = useSpring({
-        from: {opacity: 0},
-        to: {opacity: 1},
-        config: {duration: 500}
-    })
+    const items = [
+        {
+            text: "Hello world, my name is",
+            element: "p",
+            className: "small-text"
+        },
+        {
+            text: "Effie Guenther",
+            element: "h1",
+            className: ""
+        },
+        {
+            text: "I develop websites and software",
+            element: "h5",
+            className: ""
+        }
+    ]
 
-    const props2 = useSpring({
-        from: {opacity: 0},
-        to: {opacity: 1},
-        config: {duration: 500},
-        delay: 200
-    })
+    const trail = useTrail(items.length, {
+        from: { opacity: 0, transform: "translateX(20px)" },
+        to: { opacity: 1, transform: "translateX(0)" },
+        config: { duration: 500 },
+        delay: 300,
+      });
 
     return (
         <Row className={`${theme} pt-4`}>
@@ -35,13 +46,19 @@
                     <Col className='col-12'>
                         <Row>
                             <Col xs='9' sm='8' md='9'>
-                                <p className='small-text'>Hello world, my name is</p>
-                                <animated.h1 style={props1}>Effie Guenther</animated.h1>
-                                <animated.h5 style={props2}>I develop websites and software</animated.h5>
+                                {trail.map((props, idx) => {
+                                    const ItemElement = animated[items[idx].element];
+                                    return (
+                                        <ItemElement
+                                        key={idx}
+                                        style={props}
+                                        className={items[idx].className}
+                                        >
+                                        {items[idx].text}
+                                        </ItemElement>
+                                    );
+                                })}
                             </Col>
-                            {/* <Col id='sun'>
-                                <SunAndMoon currentTheme={theme}/>
-                            </Col> */}
                         </Row>
                     </Col>
                     <Col className='text-start'>

@@ -1,25 +1,54 @@
 import { Button, Row, Col } from 'reactstrap';
+import { useTrail, animated } from '@react-spring/web';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
-import upworkLogo from '../assets/img/upwork-2.svg'
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 const SocialButtons = () => {
+    
+    const items = [
+        {
+            icon: faSquare,
+            href: 'https://codesandbox.io/dashboard/recent?workspace=70c2a9ba-139f-456c-958f-96c55a09dcfa',
+        },
+        {
+            icon: faBriefcase,
+            href: 'https://www.upwork.com/freelancers/~018f785b41a5272472',
+        },
+        {
+            icon: faGithub,
+            href: 'https://github.com/effieguenther',
+        },
+        {
+            icon: faLinkedin,
+            href: 'https://www.linkedin.com/in/effieguenther/',
+        }
+    ]
+    
+    
+    const trail = useTrail(items.length, {
+        from: { opacity: 0, transform: "translateY(20px)" },
+        to: { opacity: 1, transform: "translateY(0)" },
+        config: { duration: 500 },
+        delay: 300,
+    });
+
     return (
         <div className='mt-2 d-flex justify-content-start'>
-            <Button className='social' href='https://codesandbox.io/dashboard/recent?workspace=70c2a9ba-139f-456c-958f-96c55a09dcfa' target='_blank'>
-                <FontAwesomeIcon icon={faSquare} size='xl' />
-            </Button>
-            <Button id='upwork-button' className='social' href='https://www.upwork.com/freelancers/~018f785b41a5272472' target='_blank'>
-                <img src={upworkLogo} alt='upwork logo' height='20px'/> 
-            </Button>
-            <Button className='social'href='https://github.com/effieguenther' target='_blank'> 
-                <FontAwesomeIcon icon={faGithub} size='xl'/>
-            </Button>
-            <Button className='social' href='https://www.linkedin.com/in/effieguenther/' target='_blank'> 
-                <FontAwesomeIcon icon={faLinkedin} size='xl'/>
-            </Button>
+            {
+                trail.map((props, idx) => (
+                    <animated.button 
+                        style={{ ...props, transition: 'none', animation: 'none' }} 
+                        className='social btn' 
+                        href={items[idx].href} 
+                        target='_blank'
+                    >
+                        <FontAwesomeIcon icon={items[idx].icon} size='xl' />
+                    </animated.button>
+                ))
+            }
         </div>
     );
 }
