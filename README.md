@@ -1,14 +1,16 @@
-# Welcome to my portfolio website code!
+## Welcome to my portfolio website code!
 
-I'm showcasing the code to my portfolio website as an example of my skills. At the moment it is still a work in progress. 
+Visit the website here: [effie-guenther.com](https://effie-guenther.com)
 
-Visit the website here: effie-guenther.com
+### libraries and frameworks used
 
-## libraries and frameworks used
+React
+React-spring
+Redux  
+Bootstrap  
+Reactstrap  
+Font Awesome  
 
-React <br />
-Redux <br />
-Bootstrap <br />
-Reactstrap <br />
-Font Awesome <br />
+### overview
 
+A simple SPA React App which displays my coding projects in a visually appealing way. The header contains buttons which toggle the state of the active component. React spring creates animations which are triggered as the components enter and leave the DOM. Another button in the header toggles the theme between 'light' and 'dark'. While this could have easily been achieved with a useState hook due to the fact that there is no true navigation, I chose to store the theme state with Redux for a little extra practice. 
