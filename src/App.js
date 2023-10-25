@@ -1,16 +1,24 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Provider } from 'react-redux';
-import { store } from './redux/store';
-import HomePage from './pages/HomePage';
+import { Route, Routes } from 'react-router-dom';
+
+import Header from './components/Header';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Resume from './components/Resume';
+import MyStory from './components/MyStory';
 
 function App() {
   return (
-    <Provider store={store}>
-      <div>
-        <HomePage />
+      <div className='App'>
+        <Header />
+        <Routes>
+          <Route path = '/' element={<Home />}></Route>
+          <Route path = '/projects' element={<Projects />}></Route>
+          <Route path = '/resume' element={<Resume />}></Route>
+          <Route path = '/my-story' element={<MyStory />}></Route>
+        </Routes>
       </div>
-    </Provider>
   );
 }
 

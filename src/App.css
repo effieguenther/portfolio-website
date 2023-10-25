@@ -39,7 +39,6 @@ html, body {
 
 .light.section-header {
   color: #303127;
-  border-top: 1px solid #303127;
   transition: all 2s
 }
 
@@ -279,9 +278,12 @@ div.projects.row {
 }
 
 .project-card .btn {
-  margin-top: auto;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   width: 100;
+}
+
+.project-card a.top-btn {
+  margin-top: auto;
 }
 
 /* ============== RESUME STYLING ============= */
@@ -321,6 +323,11 @@ p.story-desc {
 }
 
 /* CHROME EXTENSION STYLING */
+
+p.demo-title {
+  font-size: x-large;
+  text-align: center;
+}
 
 .bionicBold {
   font-weight: bold;
