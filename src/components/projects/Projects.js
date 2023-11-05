@@ -1,7 +1,8 @@
 import { Row, Col, Button, Card, CardTitle, CardText, Container } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { useTransition, animated, easings } from '@react-spring/web';
-import ChromeExtension from '../components/chrome-extension/ChromeExtension';
+import ChromeExtension from '../chrome-extension/ChromeExtension'
+import { miniProjects } from './project-data';
 
 const Projects = () => {
     const theme = useSelector((state) => state.themes.currentTheme);
@@ -53,18 +54,21 @@ const Projects = () => {
                                 >
                                     Preview
                                 </Button>
-                                <Button 
-                                    href='https://github.com/sruthiravindra/wordofmouth'
-                                    target='_blank'
-                                >
-                                    App Source Code
-                                </Button>
-                                <Button 
-                                    href='https://github.com/sruthiravindra/wordofmouth'
-                                    target='_blank'
-                                >
-                                    Server Source Code
-                                </Button>
+                                <div className='inline-btns'>
+                                    <Button 
+                                        href='https://github.com/sruthiravindra/wordofmouth'
+                                        target='_blank'
+                                        className='me-1'
+                                    >
+                                        Frontend
+                                    </Button>
+                                    <Button 
+                                        href='https://github.com/sruthiravindra/wordofmouth'
+                                        target='_blank'
+                                    >
+                                        Backend
+                                    </Button>
+                                </div>
                         </Card>
                     </Col>
                     <Col xs='12' sm='6' lg='4'>
@@ -128,10 +132,33 @@ const Projects = () => {
                     <p className='demo-title'>Focus Reader Demo</p>
                     <ChromeExtension />
                 </Row>
-                <Row className='mt-5' id='asana-buddy'>
+                <Row className='my-5' id='asana-buddy'>
                     <p className='demo-title'>Asana Buddy Demo</p>
                     <p className='text-center mb-4'>coming soon</p>
                 </Row>
+                <p className='demo-title'>Mini Projects</p>
+                <p className='text-center mb-5'>explorations and experimentation with code sandbox</p>
+                <Container>
+                    <Row className='mini-projects'>
+                        {
+                            miniProjects.map((project, idx) => (
+                                <Col xs='6' md='4' xl='3' key={idx} className='mini-card-container'>
+                                    <Card className='project-card mini h-100'>
+                                        <CardTitle>
+                                            {project.title}
+                                        </CardTitle>
+                                        <CardText>
+                                            {project.description}
+                                        </CardText>
+                                        <Button href={project.link} target='_blank' className='mt-auto'>
+                                            Demo
+                                        </Button>
+                                    </Card>
+                                </Col>
+                            ))
+                        }
+                    </Row>
+                </Container>
             </Container>
         </animated.div>
         </div>

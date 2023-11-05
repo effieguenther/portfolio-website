@@ -27,8 +27,8 @@ html, body {
 
     
 .light {
-  background-color: #f0f0f0;
-  color: #303127;
+  color: black;
+  background-color: white;
   transition: background-color 2s, color 1s;
 }
 
@@ -65,10 +65,25 @@ html, body {
   transition: all 1s
 }
 
-.light .skills-list p {
-  border: 1px solid #303127;
-  background-color: white;
+.light .pdf-link {
+  color: #86877a;
+  transition: all 1s;
+}
+
+.light .skills-list p.skill {
+  border: 1px solid rgb(180, 180, 180);
+  color: black;
   transition: all 1s
+}
+
+.light div.skills-list .row {
+  border-bottom: 1px solid rgb(230, 230, 230);
+  transition: all 1s;
+}
+
+.light div.work-exp .location {
+  color: #86877a;
+  transition: all 1s;
 }
 
 .light .card {
@@ -84,11 +99,6 @@ html, body {
 
 .light .project-card .sub-header {
   font-weight: bold;
-}
-
-.light img {
-  filter: grayscale(80%) hue-rotate(10deg);
-  transition: all 1s;
 }
 
 /* ============ DARK THEME ============ */
@@ -114,7 +124,6 @@ html, body {
 
 .dark.section-header {
   color: white;
-  border-top: 1px solid white;
   transition: all 2s;
 }
 
@@ -146,9 +155,23 @@ html, body {
   transition: all 1s;
 }
 
-.dark .skills-list p {
-  border: 1px solid #c9c7cf;
-  background-color: #2b2837;
+.dark .pdf-link {
+  color: #a7a5b0;
+  transition: all 1s;
+}
+
+.dark div.work-exp .location {
+  color: #a7a5b0;
+  transition: all 1s;
+}
+
+.dark .skills-list p.skill {
+  border: 1px solid #5b5867;
+  transition: all 1s;
+}
+
+.dark div.skills-list .row {
+  border-bottom: 1px solid #39334c;
   transition: all 1s;
 }
 
@@ -160,11 +183,6 @@ html, body {
 .dark .project-card .sub-header {
   color: white;
   transition: all 1s
-}
-
-.dark img {
-  filter: grayscale(90%) hue-rotate(240deg);
-  transition: all 1s;
 }
 
 /* ================ LINK + BUTTON STYLING ============== */
@@ -209,6 +227,10 @@ div.nav-buttons {
   width: 3em;
 }
 
+p.story-desc {
+  padding: 0em 2em;
+}
+
 /* ============== SECTION STYLING ============ */
 
 .section-header.row {
@@ -232,6 +254,10 @@ div.projects.row {
   margin: 1em 0em;
 }
 
+div.mini-projects.row {
+  margin-bottom: 2em;
+}
+
 .projects .col-12, .col-6, .col-4 {
   margin: 0.5em 0em;
 }
@@ -243,8 +269,21 @@ div.projects.row {
   border: none;
 }
 
+.project-card.mini {
+  padding: 1em;
+  text-align: center;
+}
+
 .project-card .row {
   margin-bottom: 2em;
+}
+
+div.mini-projects {
+  padding-bottom: 5em;
+}
+
+div.mini-card-container {
+  padding: 0.25em 0.5em;
 }
 
 .project-card .card-title {
@@ -252,6 +291,12 @@ div.projects.row {
   font-size: large;
   text-align: center;
   margin: 0em;
+}
+
+.project-card.mini .card-title {
+  font-size: medium;
+  text-decoration: underline;
+  margin-bottom: 0.5em;
 }
 
 .project-card a {
@@ -279,26 +324,58 @@ div.projects.row {
 
 .project-card .btn {
   margin-bottom: 0.5em;
-  width: 100;
+  width: 100%;
 }
 
 .project-card a.top-btn {
   margin-top: auto;
 }
 
+div.inline-btns {
+  display: flex;
+}
+
 /* ============== RESUME STYLING ============= */
 
+.resume-header {
+  margin-bottom: 0em;
+  margin-right: 1em;
+  font-size: xx-large;
+}
+
 div.skills-list {
-  padding-left: 4em;
+  padding-left: 1.5em;
+}
+
+div.skills-list .row {
+  margin-top: 0.5em;
+}
+
+div.skills-list div {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skills-list p {
-  width: 12em;
-  float: left;
-  margin: 0.2em 0.4em;
-  padding: 0.3em 0.1em;
-  border-radius: 0.3em;
+  display: flex;
   text-align: center;
+  margin-bottom: 0.5em;
+  align-items: center;
+}
+
+.skills-list p.skill {
+  border-radius: 0.3em;
+  margin-right: 0.5em;
+  padding: 0.5em 0.5em 0.25em 0.5em;
+}
+
+.skills-list svg {
+  display: block;
+  margin-right: 0.4em;
+}
+
+p.skill-section-title {
+  text-align: left;
 }
 
 p.big-header {
@@ -307,19 +384,51 @@ p.big-header {
   font-weight: bold;
 }
 
-p.small-header {
-  padding-left: 2em;
-  padding-top: 1em;
-  text-decoration: underline;
+div.work-exp .col {
+  display: flex;
+  margin-left: 1em;
+  align-items: start;
 }
 
-p.school-desc {
-  padding-left: 3em;
+div.work-exp .company {
+  margin-right: 0.5em;
 }
 
-p.story-desc {
-  text-align: center;
-  padding: 2em 2em 4em 2em;
+div.work-exp .title {
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+div.work-exp .location {
+  font-style: italic;
+  margin-right: 1em;
+}
+
+div.work-exp .date {
+  font-weight: bold;
+}
+
+ul.work-desc li {
+  margin-left: 4em;
+
+}
+
+div.education {
+  margin-left: 2em;
+  padding-bottom: 5em;
+}
+
+div.education-desc {
+  display: flex;
+}
+
+div.education-desc .title {
+  font-weight: bold;
+  margin-right: 0.25em;
+}
+
+div.education-desc .degree {
+  margin-left: 0.25em;
 }
 
 /* CHROME EXTENSION STYLING */
