@@ -1,3 +1,9 @@
+import screenshot1 from '../../assets/img/screenshot-wom-1.png'
+import screenshot2 from '../../assets/img/screenshot-wom-2.png'
+import screenshot3 from '../../assets/img/screenshot-wom-3.png'
+import screenshot4 from '../../assets/img/screenshot-wom-4.png'
+import screenshot5 from '../../assets/img/screenshot-wom-5.png'
+
 export const miniProjects = [
     {
         title: 'Learn Firebase',
@@ -43,5 +49,28 @@ export const miniProjects = [
         title: 'Practice Binary Search',
         description: 'Practice to understand binary search with python',
         link: 'https://codesandbox.io/p/sandbox/binary-search-sqjr2h?file=%2Fmain.py%3A1%2C1'
+    }
+]
+
+export const womScreenshots = [
+    {
+        src: screenshot1,
+        altText: 'screenshot 1'
+    },
+    {
+        src: screenshot2,
+        altText: 'screenshot 2'
+    },
+    {
+        src: screenshot3,
+        altText: 'screenshot 3'
+    },
+    {
+        src: screenshot4,
+        altText: 'screenshot 4'
+    },
+    {
+        src: screenshot5,
+        altText: 'screenshot 5'
     }
 ]

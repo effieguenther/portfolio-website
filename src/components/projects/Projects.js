@@ -1,11 +1,25 @@
-import { Row, Col, Button, Card, CardTitle, CardText, Container } from 'reactstrap';
+import { 
+    Row, 
+    Col, 
+    Button, 
+    Card, 
+    CardTitle, 
+    CardText, 
+    Container, 
+    Carousel, 
+    CarouselItem, 
+    CarouselControl
+} from 'reactstrap';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import { useTransition, animated, easings } from '@react-spring/web';
 import ChromeExtension from '../chrome-extension/ChromeExtension'
-import { miniProjects } from './project-data';
+import { miniProjects, womScreenshots } from './project-data';
+
 
 const Projects = () => {
     const theme = useSelector((state) => state.themes.currentTheme);
+    const [womActiveIdx, setWomActiveIdx] = useState(0);
 
     const transition = useTransition(true, {
         from: { opacity: 0.5, transform: 'translate3d(60vw, 0, 0)' },
@@ -24,7 +38,7 @@ const Projects = () => {
                         <h3 id='projects'>My Projects</h3>
                 </Row>
                 <Row className='projects'>
-                    <Col xs='12' sm='6' lg='4'>
+                    <Col xs='12'>
                         <Card className='project-card h-100'>
                             <CardTitle>
                                 <a 
@@ -35,40 +49,85 @@ const Projects = () => {
                                 </a>
                             </CardTitle>
                             <hr/>
-                            <CardText>
-                                <p>A MERN social media web application designed to service the unique infrastructure of freelance workers in Nepal</p>
-                                <p className='sub-header'>Languages:</p>  
-                                <p className='skills-used'>
-                                    JavaScript | HTML | CSS
-                                </p>
-                                <br/>
-                                <p className='sub-header'>Skills:</p>
-                                <p className='skills-used'>
-                                    React | Redux | Bootstrap | Node | Express | MongoDB | Mongoose | Git | Firebase
-                                </p>
-                            </CardText>
-                                <Button 
-                                    href='https://wordofmouth-alpha.web.app/'
-                                    target='_blank'
-                                    className='top-btn'
-                                >
-                                    Preview
-                                </Button>
-                                <div className='inline-btns'>
-                                    <Button 
-                                        href='https://github.com/sruthiravindra/wordofmouth'
-                                        target='_blank'
-                                        className='me-1'
-                                    >
-                                        Frontend
+                            <Row>
+                                <Col xs='6'> 
+                                    <CardText>
+                                        <p>A MERN social media web application designed to service the unique infrastructure of freelance workers in Nepal</p>
+                                        <p className='sub-header'>Languages:</p>  
+                                        <p className='skills-used'>
+                                            JavaScript | HTML | CSS
+                                        </p>
+                                        <br/>
+                                        <p className='sub-header'>Skills:</p>
+                                        <p className='skills-used'>
+                                            React | Redux | Bootstrap | Node | Express | MongoDB | Mongoose | Git | Firebase
+                                        </p>
+                                    </CardText>
+                                        <Button 
+                                            href='https://wordofmouth-alpha.web.app/'
+                                            target='_blank'
+                                            className='top-btn'
+                                        >
+                                        Preview
                                     </Button>
-                                    <Button 
-                                        href='https://github.com/sruthiravindra/wordofmouth'
-                                        target='_blank'
+                                    <div className='inline-btns'>
+                                        <Button 
+                                            href='https://github.com/sruthiravindra/wordofmouth'
+                                            target='_blank'
+                                            className='me-1'
+                                        >
+                                            Frontend
+                                        </Button>
+                                        <Button 
+                                            href='https://github.com/sruthiravindra/wordofmouth'
+                                            target='_blank'
+                                        >
+                                            Backend
+                                        </Button>
+                                    </div>
+                                </Col>
+                                <Col>
+                                    <Carousel 
+                                        activeIndex={womActiveIdx}
+                                        next={() => {
+                                            setWomActiveIdx(prev => 
+                                                (prev === (womScreenshots.length - 1)) ? 0 : prev + 1
+                                            )
+                                        }}
+                                        previous={() => {
+                                            setWomActiveIdx(prev => 
+                                                (prev === 0 ? (womScreenshots.length -1) : prev - 1)
+                                            )
+                                        }}
                                     >
-                                        Backend
-                                    </Button>
-                                </div>
+                                        {
+                                            womScreenshots.map((screenshot, idx) => (
+                                                <CarouselItem key={idx}>
+                                                    <img className='screenshot' src={screenshot.src} alt={screenshot.altText} />
+                                                </CarouselItem>
+                                            ))
+                                        }
+                                        <CarouselControl 
+                                            direction="prev"
+                                            drectionText="Previous"
+                                            onClickHandler={() => {
+                                                setWomActiveIdx(prev => 
+                                                    (prev === 0 ? (womScreenshots.length -1) : prev - 1)
+                                                )
+                                            }}
+                                        />
+                                        <CarouselControl 
+                                            direction="next"
+                                            drectionText="Next"
+                                            onClickHandler={() => {
+                                                setWomActiveIdx(prev => 
+                                                    (prev === (womScreenshots.length - 1)) ? 0 : prev + 1
+                                                )
+                                            }}
+                                        />
+                                    </Carousel>
+                                </Col>
+                            </Row>
                         </Card>
                     </Col>
                     <Col xs='12' sm='6' lg='4'>

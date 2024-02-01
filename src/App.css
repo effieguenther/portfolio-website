@@ -335,6 +335,17 @@ div.inline-btns {
   display: flex;
 }
 
+img.screenshot {
+  border-radius: 0.1em;
+  width: 95%;
+  box-shadow: 0 0 0.75em 0.25em rgba(128, 128, 128, 0.3);
+}
+
+.project-card .carousel-item.active {
+  justify-content: center;
+  display: flex;
+}
+
 /* ============== RESUME STYLING ============= */
 
 .resume-header {
