@@ -58,16 +58,16 @@ const Projects = () => {
                                         <p>A MERN stack web application which houses my grandma's recipes so the whole family can access them. Features include Oauth2 accounts, sessions, comments, and email notifications.</p>
                                         <p className='sub-header'>Languages:</p>  
                                         <p className='skills-used'>
-                                            JavaScript | HTML | CSS
+                                            JavaScript, HTML, CSS
                                         </p>
                                         <br/>
                                         <p className='sub-header'>Skills:</p>
                                         <p className='skills-used'>
-                                            React | Redux | Bootstrap | Node | Express | MongoDB | Mongoose | Git | Firebase
+                                            React, React Query, Oauth2, Node.js, Express, MongoDB, Mongoose, Git
                                         </p>
                                     </CardText>
                                         <Button 
-                                            href='https://wordofmouth-alpha.web.app/'
+                                            href='https://grandma-8ed4c.web.app/'
                                             target='_blank'
                                             className='top-btn'
                                         >
@@ -75,14 +75,14 @@ const Projects = () => {
                                     </Button>
                                     <div className='inline-btns'>
                                         <Button 
-                                            href='https://github.com/sruthiravindra/wordofmouth'
+                                            href='https://github.com/effieguenther/grandmas-kitchen'
                                             target='_blank'
                                             className='me-1'
                                         >
                                             Frontend
                                         </Button>
                                         <Button 
-                                            href='https://github.com/sruthiravindra/wordofmouth'
+                                            href='https://github.com/effieguenther/grandma-server'
                                             target='_blank'
                                         >
                                             Backend
@@ -151,12 +151,12 @@ const Projects = () => {
                                         <p>A collaboratively-built MERN stack social media web application designed to service the unique infrastructure of freelance workers in Nepal. Features include user accounts, comments, and friend requests.</p>
                                         <p className='sub-header'>Languages:</p>  
                                         <p className='skills-used'>
-                                            JavaScript | HTML | CSS
+                                            JavaScript, HTML, CSS
                                         </p>
                                         <br/>
                                         <p className='sub-header'>Skills:</p>
                                         <p className='skills-used'>
-                                            React | Redux | Bootstrap | Node | Express | MongoDB | Mongoose | Git | Firebase
+                                            React, Redux, Bootstrap, Node, Express, MongoDB, Mongoose, Git, Firebase
                                         </p>
                                     </CardText>
                                         <Button 
@@ -241,12 +241,12 @@ const Projects = () => {
                                         <p>A Chrome extension that lets the user reformat the text on any webpage to improve readability</p>
                                         <p className='sub-header'>Languages:</p>  
                                         <p className='skills-used'>
-                                            JavaScript | HTML | CSS
+                                            JavaScript, HTML, CSS
                                         </p>
                                         <br/>
                                         <p className='sub-header'>Skills:</p>
                                         <p className='skills-used'>
-                                            DOM Manipulation | Chrome API
+                                            DOM Manipulation, Chrome API
                                         </p>
                                     </CardText>
                                     <Button href='#focus-reader' className='top-btn'>
@@ -376,15 +376,7 @@ const Projects = () => {
                         </Card>
                     </Col>
                 </Row>
-                <Row className='mt-5' id='focus-reader'>
-                    <p className='demo-title'>Focus Reader Demo</p>
-                    <ChromeExtension />
-                </Row>
-                <Row className='my-5' id='asana-buddy'>
-                    <p className='demo-title'>Asana Buddy Demo</p>
-                    <p className='text-center mb-4'>coming soon</p>
-                </Row>
-                <p className='demo-title'>Mini Projects</p>
+                <p className='demo-title mt-5'>Mini Projects</p>
                 <p className='text-center mb-5'>explorations and experimentation with code sandbox</p>
                 <Container>
                     <Row className='mini-projects'>
@@ -407,6 +399,14 @@ const Projects = () => {
                         }
                     </Row>
                 </Container>
+                <Row className='mt-5' id='focus-reader'>
+                    <p className='demo-title'>Focus Reader Demo</p>
+                    <ChromeExtension />
+                </Row>
+                <Row className='my-5' id='asana-buddy'>
+                    <p className='demo-title'>Asana Buddy Demo</p>
+                    <p className='text-center mb-4'>coming soon</p>
+                </Row>
             </Container>
         </animated.div>
         </div>
