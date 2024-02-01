@@ -341,6 +341,11 @@ img.screenshot {
   box-shadow: 0 0 0.75em 0.25em rgba(128, 128, 128, 0.3);
 }
 
+.project-card .carousel {
+  display: flex;
+  align-items: center;
+}
+
 .project-card .carousel-item.active {
   justify-content: center;
   display: flex;

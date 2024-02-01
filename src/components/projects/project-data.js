@@ -1,8 +1,20 @@
-import screenshot1 from '../../assets/img/screenshot-wom-1.png'
-import screenshot2 from '../../assets/img/screenshot-wom-2.png'
-import screenshot3 from '../../assets/img/screenshot-wom-3.png'
-import screenshot4 from '../../assets/img/screenshot-wom-4.png'
-import screenshot5 from '../../assets/img/screenshot-wom-5.png'
+import screenshot1 from '../../assets/img/screenshot-wom-1.png';
+import screenshot2 from '../../assets/img/screenshot-wom-2.png';
+import screenshot3 from '../../assets/img/screenshot-wom-3.png';
+import screenshot4 from '../../assets/img/screenshot-wom-4.png';
+import screenshot5 from '../../assets/img/screenshot-wom-5.png';
+import frScreenshot1 from '../../assets/img/fr-screenshot-1.png';
+import frScreenshot2 from '../../assets/img/fr-screenshot-2.png';
+import frScreenshot3 from '../../assets/img/fr-screenshot-3.png';
+import abScreenshot1 from '../../assets/img/example_1.png';
+import abScreenshot2 from '../../assets/img/example_2.png';
+import abScreenshot3 from '../../assets/img/example_3.png';
+import gmaScreenshot1 from '../../assets/img/gma-screenshot-1.png';
+import gmaScreenshot2 from '../../assets/img/gma-screenshot-2.png';
+import gmaScreenshot3 from '../../assets/img/gma-screenshot-3.png';
+import gmaScreenshot4 from '../../assets/img/gma-screenshot-4.png';
+import gmaScreenshot5 from '../../assets/img/gma-screenshot-5.png';
+
 
 export const miniProjects = [
     {
@@ -55,22 +67,75 @@ export const miniProjects = [
 export const womScreenshots = [
     {
         src: screenshot1,
-        altText: 'screenshot 1'
+        altText: 'word of mouth screenshot 1'
     },
     {
         src: screenshot2,
-        altText: 'screenshot 2'
+        altText: 'word of mouth screenshot 2'
     },
     {
         src: screenshot3,
-        altText: 'screenshot 3'
+        altText: 'word of mouth screenshot 3'
     },
     {
         src: screenshot4,
-        altText: 'screenshot 4'
+        altText: 'word of mouth screenshot 4'
     },
     {
         src: screenshot5,
-        altText: 'screenshot 5'
+        altText: 'word of mouth screenshot 5'
+    }
+]
+
+export const frScreenshots = [
+    {
+        src: frScreenshot1,
+        altText: 'focus reader screenshot 1'
+    },
+    {
+        src: frScreenshot2,
+        altText: 'focus reader screenshot 2'
+    },
+    {
+        src: frScreenshot3,
+        altText: 'focus reader screenshot 3'
+    }
+]
+
+export const abScreenshots = [
+    {
+        src: abScreenshot1,
+        altText: 'asana buddy screenshot 1'
+    },
+    {
+        src: abScreenshot2,
+        altText: 'asana buddy screenshot 2'
+    },
+    {
+        src: abScreenshot3,
+        altText: 'asana buddy screenshot 3'
+    }
+]
+
+export const gmaScreenshots = [
+    {
+        src: gmaScreenshot1,
+        altText: 'grandma sandys kitchen screenshot 1'
+    },
+    {
+        src: gmaScreenshot2,
+        altText: 'grandma sandys kitchen screenshot 2'
+    },
+    {
+        src: gmaScreenshot3,
+        altText: 'grandma sandys kitchen screenshot 3'
+    },
+    {
+        src: gmaScreenshot4,
+        altText: 'grandma sandys kitchen screenshot 4'
+    },
+    {
+        src: gmaScreenshot5,
+        altText: 'grandma sandys kitchen screenshot 5'
     }
 ]
