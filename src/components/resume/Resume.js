@@ -1,9 +1,9 @@
-import { Row, Col, Container, Button } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { useTransition, useTrail, animated, easings } from '@react-spring/web';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skills } from './skills';
-import { version } from 'react';
+import { resumeData } from './resume-data';
 
 const Resume = () => {
     const theme = useSelector((state) => state.themes.currentTheme);
@@ -207,54 +207,32 @@ const Resume = () => {
                         </Row>
                     </div>
                     <p className='big-header'>WORK EXPERIENCE</p>
-                    <Row>
-                        <hr/>
-                        <Row className='work-exp'>
-                            <Col>
-                                <p className='company'>Dwishes</p>
-                                <p>-</p>
-                                <p className='title'>Freelance Full-Stack Developer</p>
-                            </Col>
-                            <Col className='justify-content-end'>
-                                <p className='location'>Remote (USA)</p>
-                                <p className='date'>Jul. 2023 - Present</p>
-                            </Col>
-                        </Row>
-                        <hr/>
-                        <ul className='work-desc'>
-                            <li>
-                                Successfully deliver 5 milestones and receive code reviews from a senior developer.
-                            </li>
-                            <li>
-                                Translate wireframes into components in JavaScript React which make API calls to the server.
-                            </li>
-                            <li>
-                                Build and test CRUD cloud functions in Node.js which create an environment for backend code to run in the serverless Firebase cloud.
-                            </li>
-                        </ul>
-                        <hr/>
-                        <Row className='work-exp'>
-                            <Col>
-                                <p className='company'>Nili Lotan</p>
-                                <p>-</p>
-                                <p className='title'>Product Developer</p>
-                            </Col>
-                            <Col className='justify-content-end'>
-                                <p className='location'>New York, NY</p>
-                                <p className='date'>Nov. 2022 - Jun. 2023</p>
-                            </Col>
-                        </Row>
-                        <hr/>
-                        <ul className='work-desc'>
-                            <li>
-                                Prepared materials and schedules to orchestrate the creation of 400+ garments every season.
-                            </li>
-                            <li>
-                                Converted intangible design standards into technical documentation to bridge the gap between design and production teams.
-                            </li>
-                        </ul>
-
-                    </Row>
+                    {
+                        resumeData.map((job, jobIdx) => {
+                            return <div key={jobIdx}>
+                                <hr/>
+                                <Row className='work-exp'>
+                                    <Col xs='12' md='6' lg='8' xxl='9' className='d-flex ps-4'>
+                                        <p className='company'>{job.company}</p>
+                                        <p>-</p>
+                                        <p className='title'>{job.title}</p>
+                                    </Col>
+                                    <Col className='justify-content-start'>
+                                        <p className='location'>{job.location}</p>
+                                        <p className='date'>{job.date}</p>
+                                    </Col>
+                                </Row>
+                                <hr/>
+                                <ul className='work-desc'>
+                                    {
+                                        job.description.map((desc, idx) => (
+                                            <li key={jobIdx + idx}>{desc}</li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        })
+                    }
                     <p className='big-header'>EDUCATION AND CERTIFICATES</p>
                     <div className='education'>
                         <Row>

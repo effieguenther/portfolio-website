@@ -208,7 +208,7 @@ div.collapse-nav-btns a {
 .header-link a {
   text-decoration: none;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 1em 1em 1em 2em;
   font-size: small;
 }
@@ -421,7 +421,11 @@ p.big-header {
 div.work-exp .col {
   display: flex;
   margin-left: 1em;
-  align-items: start;
+  align-items: center;
+}
+
+div.work-exp p {
+  margin-bottom: 0;
 }
 
 div.work-exp .company {
@@ -444,7 +448,6 @@ div.work-exp .date {
 
 ul.work-desc li {
   margin-left: 4em;
-
 }
 
 div.education {
