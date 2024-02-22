@@ -1,4 +1,3 @@
-import { Button, Row, Col } from 'reactstrap';
 import { useTrail, animated } from '@react-spring/web';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -39,14 +38,15 @@ const SocialButtons = () => {
         <div className='mt-2 d-flex justify-content-start'>
             {
                 trail.map((props, idx) => (
-                    <animated.button 
+                    <animated.a 
                         style={{ ...props, transition: 'none', animation: 'none' }} 
-                        className='social btn' 
                         href={items[idx].href} 
                         target='_blank'
                     >
-                        <FontAwesomeIcon icon={items[idx].icon} size='xl' />
-                    </animated.button>
+                        <button   className='social btn' >
+                            <FontAwesomeIcon icon={items[idx].icon} size='xl' />
+                        </button>
+                    </animated.a>
                 ))
             }
         </div>
