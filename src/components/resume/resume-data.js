@@ -1,13 +1,13 @@
 export const resumeData = [
     {
-        company: "Dwishes",
+        company: "Software Harmonics / Data Annotation / Dwishes",
         title: "Full Stack Developer",
         location: "Remote",
         date: "Jul. 2023 - present",
         description: [
-            "Successfully deliver 7+ milestones to build a React frontend and a custom API for a data-entry app.",
-            "Translate wireframes into dynamic React components that map data retrieved from the server.",
-            "Build and test CRUD cloud functions in Node.js which interact with a Firestore cloud database."
+            "Data Annotation: Evaluate AI-generated code in python and JavaScript for correctness and efficiency.",
+            "Software Harmonics, LLC: Implement mobile responsiveness for an existing ERP web application by creating Figma UX wireframes and implementing with the React MUI library.",
+            "Dwishes: o	Delivered 7 new features with JavaScript React, Node.js, and Firebase cloud for a data-entry app startup, Dwishes."
         ]
     },
     {
